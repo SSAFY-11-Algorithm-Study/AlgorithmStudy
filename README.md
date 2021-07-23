@@ -13,4 +13,4 @@
 ### 🗓 일정
 | |wangsuuu|alstjdwo1601|min9minQ|penglingss|
 | :-: | :-: | :-: | :-: | :-: |
-| 1주차<br>(07.25 ~ 07.31) | [문자열 압축](https://programmers.co.kr/learn/courses/30/lessons/60057) | [124나라의 숫자](https://programmers.co.kr/learn/courses/30/lessons/12899)    | [타겟 넘버](https://programmers.co.kr/learn/courses/30/lessons/43165) |  [더맵게](https://programmers.co.kr/learn/courses/30/lessons/42626) | 
+| 1주차<br>(07.25 ~ 07.31) | [문자열 압축](https://programmers.co.kr/learn/courses/30/lessons/60057) | [124나라의 숫자](https://programmers.co.kr/learn/courses/30/lessons/12899)    | [타겟 넘버](https://programmers.co.kr/learn/courses/30/lessons/43165) |  [단어 정렬](https://www.acmicpc.net/problem/1181) | 
