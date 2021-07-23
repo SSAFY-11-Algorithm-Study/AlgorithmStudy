@@ -6,7 +6,7 @@
 - 총 4문제 풀이 업로드
 - 일주일에 1회(토) 원격 회의로 코드 리뷰 진행
 
-### 👨‍👩‍👧‍👦 Contributers
+### 👨‍👩‍👧‍👦 Contributors
 | [wangsuuu](https://github.com/wangsuuu) | [alstjdwo1601](https://github.com/alstjdwo1601) | [min9minQ](https://github.com/min9minQ) | [penglingss](https://github.com/penglingss) |
 |:-------------------:|:-------------------:|:-------------------:|:-------------------:|
 
