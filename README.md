@@ -14,4 +14,4 @@
 | |wangsuuu|alstjdwo1601|min9minQ|penglingss|anottrx|
 | :-: | :-: | :-: | :-: | :-: | :-: |
 | 1주차<br>(07.25 ~ 07.31) | [음계 - 브론즈2](https://www.acmicpc.net/problem/2920) | [문자열 - 실버4](https://www.acmicpc.net/problem/1120)    | [괄호 - 실버4](https://www.acmicpc.net/problem/9012) |  [단어 정렬 - 실버5](https://www.acmicpc.net/problem/1181) | [덩치 - 실버5](https://www.acmicpc.net/problem/7568) |
-| 2주차<br>(08.01 ~ 08.07) | [제로-실버4](https://www.acmicpc.net/problem/10773) | [병든 나이트 - 실버4](https://www.acmicpc.net/problem/1783) | - |  - | [요세푸스 문제 0 - 실버4](https://www.acmicpc.net/problem/11866) |
+| 2주차<br>(08.01 ~ 08.07) | [제로-실버4](https://www.acmicpc.net/problem/10773) | [병든 나이트 - 실버4](https://www.acmicpc.net/problem/1783) | - |  [타겟 넘버 - 레벨2](https://programmers.co.kr/learn/courses/30/lessons/43165) | [요세푸스 문제 0 - 실버4](https://www.acmicpc.net/problem/11866) |
