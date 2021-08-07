@@ -13,26 +13,11 @@ public class boj10158_2 {
 
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int w = Integer.parseInt(st1.nextToken()); // AB
-        int h = Integer.parseInt(st1.nextToken()); // AB
-        int p = Integer.parseInt(st2.nextToken()); // AB
-        int q = Integer.parseInt(st2.nextToken()); // AB
-        int t = Integer.parseInt(st3.nextToken()); // AB
-
-        /*
-        p += t;
-        q += t;
-
-        p %= 2 * w;
-        q %= 2 * h;
-
-        if(p > w) {
-            p = 2*w - p;
-        }
-        if(q > h) {
-            q = 2*h - q;
-        }
-        */
+        int w = Integer.parseInt(st1.nextToken());
+        int h = Integer.parseInt(st1.nextToken());
+        int p = Integer.parseInt(st2.nextToken());
+        int q = Integer.parseInt(st2.nextToken());
+        int t = Integer.parseInt(st3.nextToken());
 
         int divW = (t + p) / w;
         int modW = (t + p) % w;
@@ -51,12 +36,11 @@ public class boj10158_2 {
             q = h - modH;
         }
 
-//        System.out.println(p + " " + q);
-        bw.write(Integer.toString(p));//출력
-        bw.write(" ");//출력
-        bw.write(Integer.toString(q));//출력
-        bw.flush();//남아있는 데이터를 모두 출력시킴
-        bw.close();//스트림을 닫음
+        bw.write(Integer.toString(p));
+        bw.write(" ");
+        bw.write(Integer.toString(q));
+        bw.flush();
+        bw.close();
 
     }
 
