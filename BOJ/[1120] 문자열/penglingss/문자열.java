@@ -12,7 +12,7 @@ public class boj1120 {
         }
         System.out.println(dif);
     }
-
+    
     public static int getDif(String A, String B, int startIdx) {
         int result = 0;
         for (int i = 0; i < A.length(); i++) {
