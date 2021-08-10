@@ -10,7 +10,7 @@ public class Main {
             System.out.println("ascending");
         } else if (str.equals("8 7 6 5 4 3 2 1")) {
             System.out.println("descending");
-        } else {
+        } else { 
             System.out.println("mixed");
         }
     }
