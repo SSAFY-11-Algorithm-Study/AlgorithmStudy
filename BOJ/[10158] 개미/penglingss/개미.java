@@ -43,5 +43,4 @@ public class boj10158_2 {
         bw.close();
 
     }
-
 }
