@@ -23,7 +23,7 @@ public class Main {
                 } else if (str.charAt(j) == ')') {
                     cnt--;
                 }
-            }
+            } 
             if (cnt == 0) {
                 System.out.println("YES");
             } else {
