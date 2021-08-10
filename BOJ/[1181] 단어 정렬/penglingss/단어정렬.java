@@ -16,7 +16,7 @@ public class Main {
                 return o1.compareTo(o2); // 사전순
             } else { // 길이가 같지않다면
                 return o1.length() - o2.length(); // 길이 오름차순
-            }
+            } 
         });
 
         System.out.println(arr[0]);
