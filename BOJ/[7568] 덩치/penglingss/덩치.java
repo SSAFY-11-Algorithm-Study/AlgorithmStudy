@@ -36,7 +36,7 @@ public class Main {
             }
             p1.rank = rank;
         }
-
+ 
         for (int i = 0; i < n - 1; i++) {
             System.out.print(list.get(i).rank + " ");
         }
