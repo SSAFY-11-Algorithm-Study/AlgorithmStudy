@@ -1,5 +1,3 @@
-//테케는 맞는데 채점하면 틀렸다고 뜹니다ㅠ
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
