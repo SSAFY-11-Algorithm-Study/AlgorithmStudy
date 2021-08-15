@@ -3,50 +3,35 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.StringTokenizer;
+import java.util.HashMap;
 
 public class BOJ9375 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        ArrayList<String> cloth = new ArrayList<>();
-        ArrayList<Integer> cnt = new ArrayList<>();
 
         int T = Integer.parseInt(st.nextToken()); // 테스트 케이스 (최대 100)
-        int[] answer = new int[T];
         for (int tc = 0; tc < T; tc++) {
+            HashMap<String, Integer> cloth = new HashMap<>();
             st = new StringTokenizer(br.readLine());
-            int N = Integer.parseInt(st.nextToken()); // 입력 개수
-            cloth = new ArrayList<>(); // 의상의 종류
-            cnt = new ArrayList<>(); // 해당 의상 종류의 개수
+            int N = Integer.parseInt(st.nextToken()); // 해빈이가 가진 의상의 수
             for (int i = 0; i < N; i++) {
                 st = new StringTokenizer(br.readLine(), " ");
-                String iCloth = st.nextToken(); // 의상의 이름 (사용 안 함)
-                String iCType = st.nextToken(); // 의상의 종류
-                boolean isIn = false; // 우선 입력받은 의상 종류가 존재하지 않는다고 생각
-                for (int j = 0; j < cloth.size(); j++) {
-                    if (cloth.get(j).equals(iCType)) { // cloth에 입력받은 의상 종류가 있다면
-                        int n = cnt.get(j);
-                        cnt.set(j, ++n); // 해당 의상 개수에 1 더하기
-                        isIn = true;
-                        break;
-                    }
-                }
-                if (isIn == false) { // cloth에 존재하지 않는다면
-                    cloth.add(iCType); // 의상 종류 cloth에 넣기
-                    cnt.add(1); // 1개라고 개수 정하기
+                String name = st.nextToken(); // 의상 이름은 필요없다
+                String type = st.nextToken(); // 의상 종료를 입력 받는다
+                if (cloth.containsKey(type)) { // 의상 종류가 HashMap에 있다면 값을 받아 1을 더한다
+                    cloth.put(type, cloth.get(type) + 1);
+                } else { // 의상 종류가 없다면 그냥 1을 입력한다
+                    cloth.put(type, 1);
                 }
             }
-            int total = 1;
-            for (int i = 0; i < cnt.size(); i++) {
-                // (의상 종류 1개당 존재하는 의상 개수 + 1)를 매번 곱하기
-                total = total * (cnt.get(i) + 1);
+            int answer = 1;
+            for (int c : cloth.values()) { // 의상 종류의 각 개수마다 1씩 더해서 곱한다. 이때 1은 해당 의상을 전혀 안 입은 경우
+                answer = answer * (c + 1);
             }
-            answer[tc] = total - 1; // 옷을 모두 안 입은 경우인 1을 빼기
-        }
-        for (int tc = 0; tc < T; tc++) {
-            System.out.println(answer[tc]); // 답 출력
+
+            System.out.println(answer - 1); // 의상을 모두 안 입은 경우는 제외하기 때문에 1을 뺀다
         }
     }
 }
