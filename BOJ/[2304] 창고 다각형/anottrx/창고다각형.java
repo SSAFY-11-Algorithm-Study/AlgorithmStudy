@@ -43,7 +43,7 @@ public class BOJ2304 {
                 a = pillar[i][0];
                 break;
             }
-            if (pillar[i][1] > p2) {
+            if (pillar[i][1] > p2) { // 이전보다 높은 기둥을 만나면 여태까지 면적 계산
                 answer = answer + p2 * (pillar[i][0] - p1);
                 p1 = pillar[i][0];
                 p2 = pillar[i][1];
@@ -57,7 +57,7 @@ public class BOJ2304 {
                 b = pillar[i][0];
                 break;
             }
-            if (pillar[i][1] > p2) {
+            if (pillar[i][1] > p2) { // 이전보다 높은 기둥을 만나면 여태까지 면적 계산
                 answer = answer + p2 * (p1 - pillar[i][0]);
                 p1 = pillar[i][0];
                 p2 = pillar[i][1];
