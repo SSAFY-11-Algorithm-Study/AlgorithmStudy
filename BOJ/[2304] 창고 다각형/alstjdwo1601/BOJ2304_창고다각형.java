@@ -55,6 +55,7 @@ public class BOJ2304_창고다각형 {
 		//맥스 인덱스 찾기
 		int cnt = 0;
 		int maxPosition = 0;
+		int maxLastidx = 0;
 		for(int i = 0 ; i < arr.length; i++) {
 			if(arr[i].x == maxIdx) {
 				maxPosition = i;
@@ -67,6 +68,12 @@ public class BOJ2304_창고다각형 {
 				cnt++;
 		}
 		
+		for(int i = arr.length-1 ; i > 0 ; i--) {
+			if(arr[i].height == arr[maxPosition].height) {
+				maxLastidx = i;
+				break;
+			}
+		}
 		
 		int startIdx = arr[0].x;
 		int startHeight = arr[0].height;
@@ -85,7 +92,13 @@ public class BOJ2304_창고다각형 {
 		}
 		
 		//가장 큰곳 넓이 추가
-		answer += arr[maxPosition].height * cnt;
+		if(cnt ==1)
+			answer += arr[maxPosition].height;
+		else {
+			System.out.println(arr[maxLastidx].x);
+			System.out.println(arr[maxPosition].x);
+			answer += arr[maxPosition].height * (arr[maxLastidx].x- arr[maxPosition].x +1);
+		}
 		
 		
 		for(int i = size-2 ; i >= 0 ; i --) {
