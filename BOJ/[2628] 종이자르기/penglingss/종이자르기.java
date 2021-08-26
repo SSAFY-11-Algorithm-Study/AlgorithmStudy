@@ -32,7 +32,7 @@ public class boj2628 {
         int maxH = 0;
         for (int i = 0; i < cutW.size() - 1; i++) { // 두개씩 보면서
             int dif = cutW.get(i + 1) - cutW.get(i); // 차이를 구해줌
-            if(dif > maxH) maxH = dif; // 차이의 최대값 구함 (잘랐을때 최대의 길이)
+            if(dif > maxH) maxH = dif; // 차이의 최댓값 구함 (잘랐을때 최대의 길이)
         }
         for (int i = 0; i < cutH.size() - 1; i++) {
             int dif = cutH.get(i + 1) - cutH.get(i);
