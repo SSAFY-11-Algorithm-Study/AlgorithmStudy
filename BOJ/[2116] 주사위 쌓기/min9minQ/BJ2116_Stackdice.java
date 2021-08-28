@@ -45,7 +45,7 @@ public class BJ2116_Stackdice {
 				
 				for(int k = 0; k <6; k ++) {
 					if(arr[j][k]==top) {
-						temp =j;
+						temp = k;
 					}
 				}
 				
