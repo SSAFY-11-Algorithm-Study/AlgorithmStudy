@@ -8,7 +8,7 @@ public class boj2635 {
         ArrayList<Integer> answer = new ArrayList<>();
         int maxCnt = 0;
 
-        for (int i = N / 2; i <= N; i++) {
+        for (int i = N / 2; i <= N; i++) { // N/2부터 N까지 모든 경우
             ArrayList<Integer> list = new ArrayList<>();
             int cur = N;
             list.add(cur);
