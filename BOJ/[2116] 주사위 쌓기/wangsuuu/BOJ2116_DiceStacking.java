@@ -1,5 +1,5 @@
-//답이 무조건 30으로 나옵니다ㅠㅠ
-//thanks to penglingss :) 
+
+//recorrect errors thanks to penglingss :) 
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
