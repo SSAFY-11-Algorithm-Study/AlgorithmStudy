@@ -1,4 +1,5 @@
 //답이 무조건 30으로 나옵니다ㅠㅠ
+//thanks to penglingss :) 
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -42,7 +43,7 @@ public class BOJ2116_DiceStacking {
 			int max=0; //주사위 하나 당 옆면의 최대값
 			
 			for(int j=0; j<6; j++) {
-				if(dices[i][j]!= lower_val || dices[i][j]!=upper_val) {
+				if(dices[i][j]!= lower_val && dices[i][j]!=upper_val) {
 					max = Math.max(max, dices[i][j]);
 				}
 			}
@@ -65,7 +66,7 @@ public class BOJ2116_DiceStacking {
 		if(n==0) return 5;
 		if(n==1) return 3;
 		if(n==2) return 4;
-		if(n==3) return 2;
+		if(n==3) return 1;
 		if(n==4) return 2;
 		if(n==5) return 0;
 		
