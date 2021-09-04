@@ -13,7 +13,7 @@ public class Main {
             max = Math.max(max, lan[i]); // 최댓값 구하기
         }
 
-        long min = 1; // 랜선의 길이는 
+        long min = 1; // 랜선의 길이는 자연수
 
         while (min <= max) { // 이분 탐색
             long length = (max + min) / 2;
