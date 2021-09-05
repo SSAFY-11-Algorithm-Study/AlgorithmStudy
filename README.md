@@ -19,3 +19,4 @@
 | 4주차<br>(08.15 ~ 08.21) | [줄 세우기](https://www.acmicpc.net/problem/2605) | [경비원](https://www.acmicpc.net/problem/2564) | [빙고](https://www.acmicpc.net/problem/2578) | [창고 다각형](https://www.acmicpc.net/problem/2304) | [수열](https://www.acmicpc.net/problem/2559) |
 | 5주차<br>(08.22 ~ 08.28) | [수 이어가기](https://www.acmicpc.net/problem/2635) | [종이자르기](https://www.acmicpc.net/problem/2628) | [딱지놀이](https://www.acmicpc.net/problem/14696) | [주사위 쌓기](https://www.acmicpc.net/problem/2116) | [직사각형](https://www.acmicpc.net/problem/2527) |
 | 6주차<br>(08.29 ~ 09.04) | [최소비용 구하기](https://www.acmicpc.net/problem/1916) | [랜선 자르기](https://www.acmicpc.net/problem/1654) | [스타트와 링크](https://www.acmicpc.net/problem/14889) | [거리두기 확인하기](https://programmers.co.kr/learn/courses/30/lessons/81302) | [아기 상어](https://www.acmicpc.net/problem/16236) |
+| 6주차<br>(09.05 ~ 09.11) | - | - | - | [메뉴 리뉴얼](https://programmers.co.kr/learn/courses/30/lessons/72411) | - |
