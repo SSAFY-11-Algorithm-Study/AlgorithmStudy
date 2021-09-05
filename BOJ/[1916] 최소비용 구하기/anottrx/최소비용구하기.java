@@ -32,9 +32,10 @@ public class BOJ1916_2 {
         }
 
         @Override
-        public int compareTo(Edge o) {
+        public int compareTo(Edge o) { // 우선순위큐에 넣을 때 가중치 비교
             return weight - o.weight;
         }
+
     }
 
     public static void main(String[] args) throws IOException {
@@ -47,7 +48,7 @@ public class BOJ1916_2 {
         Arrays.fill(distance, Integer.MAX_VALUE);
         adjList = new ArrayList[N + 1];
         for (int i = 1; i <= N; i++) {
-            adjList[i] = new ArrayList<Edge>();
+            adjList[i] = new ArrayList<Edge>(); // 5개의 정점에 대해서 연결리스트를 우선 만든다 (이때는 모두 0개)
         }
 
         for (int i = 0; i < M; i++) {
@@ -57,6 +58,8 @@ public class BOJ1916_2 {
             int w = Integer.parseInt(st.nextToken());
             adjList[a].add(new Edge(b, w));
         }
+        // adjList[] size: 1:4개, 2:1개, 3:2개, 4:1개, 5:0개
+
         StringTokenizer st = new StringTokenizer(br.readLine());
         start = Integer.parseInt(st.nextToken());
         end = Integer.parseInt(st.nextToken());
@@ -74,27 +77,24 @@ public class BOJ1916_2 {
         pq.add(new Edge(start, 0));
 
         while (!pq.isEmpty()) {
-            Edge now = pq.poll();
-            System.out.println("시작 빼는 것: " + now.e);
+            Edge now = pq.poll(); // 빼는 순서: 1 4 2 3 5
 
             if (now.e == end) {
                 break;
             }
 
             if (now.weight <= distance[now.e]) { // 더 작은 가중치일 때
-                int len = adjList[now.e].size(); // 해당 정점에서 출발하는 간선의 수
+                int len = adjList[now.e].size(); // 해당 정점에서 출발하는 간선의 수 (1:4개, 2:1개, 3:2개, 4:1개, 5:0개)
 
                 for (int i = 0; i < len; i++) {
                     Edge next = (Edge) adjList[now.e].get(i); // 해당 정점에서 출발하는 간선 (정점, 가중치)
 
                     if (distance[next.e] > now.weight + next.weight) { // 거리가 더 작을 경우
                         distance[next.e] = now.weight + next.weight;
-                        pq.add(new Edge(next.e, distance[next.e]));
+                        pq.add(new Edge(next.e, distance[next.e])); // 더해지는 경우: 1:(2 3 4 5) 4(5) 
                     }
                 }
             }
-
-            // 빼는(add) 순서: 1(2 3 4 5) 4(5) 2 3 5
 
         }
     }
