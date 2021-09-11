@@ -14,7 +14,7 @@ public class BOJ2012 {
         Arrays.sort(score); // 정렬
         long diff = 0;
         for (int i = 0; i < N; i++) { // 차례대로 차이 구해서 합하기
-            diff = diff + (long) Math.abs(i + 1 - score[i]);
+            diff = diff + Math.abs(i + 1 - score[i]);
         }
         System.out.println(diff);
     }
