@@ -27,7 +27,6 @@ public class BJ3085_candygame {
 		search();
 
 	}
-
 	private static void search() {
 		// 가로 바꿔보고 체크  반복
 		for(int i = 0; i < N; i++) {
