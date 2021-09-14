@@ -2,8 +2,7 @@ package week7;
 
 import java.util.*;
 
-// 제가 이해한대로는 예시 2번에서 xyz 가 두개있으면 xz,xy같은것도
-// 정답에 포함되어야하는거같은데... 이해가 안가네요
+
 class Solution {
     
     static char[] arr ;
@@ -29,11 +28,23 @@ class Solution {
         ArrayList<String> answerList = new ArrayList<>();
         
         //해시맵에 ([AB], 3) 이런식으로 담겨있으니 
-        //value가 2보다 같거나크면서 course[i]와 같으면 정답배열추가
+        //value가 2보다 같거나크면서 course[i]와 같은 것중에 value가 제일 큰거 찾기
         for(int i = 0 ; i < course.length; i++){
+            int max = 0;
             for(Map.Entry<String, Integer> e : menuHM.entrySet()){
                 if(e.getValue() >=2 && e.getKey().length() == course[i]){
-                    answerList.add(e.getKey());
+                    if(max < e.getValue()){
+                        max = e.getValue();
+                    }
+                }
+            }
+            
+            //최대값인 애들을 정답배열에 추가
+            for(Map.Entry<String, Integer> e : menuHM.entrySet()){
+                if(e.getValue() >=2 && e.getKey().length() == course[i]){
+                    if(max == e.getValue() && e.getKey() != null){
+                        answerList.add(e.getKey());
+                    }
                 }
             }
         }
