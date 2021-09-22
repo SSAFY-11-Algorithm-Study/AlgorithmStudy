@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class Solution {
     public int solution(int[][] triangle) {
         int answer = 0;
@@ -14,9 +16,11 @@ class Solution {
             }
         }
 
-        for (int j = 0; j < triangle[triangle.length - 1].length; j++) {
-            answer = Math.max(answer, triangle[triangle.length - 1][j]); // 최댓값
-        }
+        // 최댓값
+        // for (int j = 0; j < triangle[triangle.length - 1].length; j++) {
+        //     answer = Math.max(answer, triangle[triangle.length - 1][j]);
+        // }
+        answer = Arrays.stream(triangle[triangle.length - 1]).max().getAsInt();
 
         return answer;
     }
