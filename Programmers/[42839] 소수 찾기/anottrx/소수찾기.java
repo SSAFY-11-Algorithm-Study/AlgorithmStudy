@@ -41,21 +41,14 @@ class Solution {
     }
     
     private static boolean checkIfPrime(int num) { // 소수인지 확인
-        if (num == 2 || num == 3) { // 2 또는 3은 소수
-            return true;
-        }
-        if (num == 0 || num == 1 || num % 2 == 0 || num % 3 == 0) { // 0, 1는 소수 아님. 2나 3으로 나뉘어도 소수 아님
+        if (num == 0 || num == 1) {
             return false;
         }
-        int cnt = 0;
-        for (int i = 5; i <= num; i++) {
+        for (int i = 2; i <= Math.sqrt(num); i++) {
             if (num % i == 0) {
-                cnt++;
-            }
-            if (cnt >= 2) { // 나뉘어지는 수가 2개 이상이라면 소수 아님
                 return false;
             }
         }
-        return true; // 그외는 소수
+        return true;
     }
 }
