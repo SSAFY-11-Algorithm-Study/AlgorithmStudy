@@ -1,4 +1,5 @@
 // "ABABAAAAAB", "ABBAA" 통과 못하는 코드
+// 완전탐색 필요...
 
 class Solution {
     public int solution(String name) {
