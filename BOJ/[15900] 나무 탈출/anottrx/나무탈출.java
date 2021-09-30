@@ -1,29 +1,49 @@
-/*
-못 풀었습니다... 아래 코드는 입출력만입니다ㅠ
-제 생각에는 양방향 가능한 링크드리스트를 만들어야할 것 같습니다.
-그리고 해당 링크드리스트에 자식 유무, 게임 말의 개수(자식이 없다면 0으로, 있다면 1로 초기화)를 넣어줘야 할 것 같아요.
-게임을 할 때는 자식이 없는 노드마다 위로 올라가야할 것 같은데요... 뭔가 역순으로 생각해야할 것 같기도 하고요...
-구현을 못하겠습니다ㅠ 죄송합니다ㅠㅠㅠ
-*/
-
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class BOJ15900 {
+public class Main {
+
+    static ArrayList<ArrayList<Integer>> tree;
+    static int N, cnt;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String answer = "Yes"; // 답
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int N = Integer.parseInt(st.nextToken());
-        int[][] tree = new int[N - 1][2];
-        for (int i = 0; i < N; i++) {
+        N = Integer.parseInt(st.nextToken());
+        tree = new ArrayList<>();
+        cnt = 0;
+        for (int i = 0; i <= N; i++) {
+            tree.add(new ArrayList<Integer>());
+        }
+        for (int i = 0; i < N - 1; i++) {
             st = new StringTokenizer(br.readLine());
-            tree[i][0] = Integer.parseInt(st.nextToken());
-            tree[i][1] = Integer.parseInt(st.nextToken());
+            int from = Integer.parseInt(st.nextToken());
+            int to = Integer.parseInt(st.nextToken());
+            tree.get(from).add(to);
+            tree.get(to).add(from);
         }
 
-        System.out.println(answer);
+        dfs(1, 0, 0);
+
+        bw.write((cnt % 2 == 0) ? "No\n" : "Yes\n");
+        bw.flush();
+        bw.close();
+    }
+
+    private static void dfs(int cur, int parent, int len) {
+        for (int i = 0; i < tree.get(cur).size(); i++) {
+            if (tree.get(cur).get(i) != parent) {
+                dfs(tree.get(cur).get(i), cur, len + 1);
+            }
+        }
+        if (tree.get(cur).size() == 1 && cur != 1) {
+            cnt += len;
+        }
     }
 }
