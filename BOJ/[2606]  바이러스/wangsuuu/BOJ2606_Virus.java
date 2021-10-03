@@ -33,11 +33,7 @@ public class BOJ2606_Virus {
 		dfs(1);
 		System.out.println(cnt);
 	}
-	
-	/*
-	 * 함수 flow 순서가 잘못됨. 현재 노드 처리 후 또 N번의 반복문을 통해서 재귀호출을 하니
-	 * 끝이 나지 않아 stack overFlow 발생함.
-	 * ex) 끝에 도달 해서 더 갈 곳이 없는데도 N번의 재귀호출을 함..
+
 	public static void dfs(int start) {
 		//현재 노드를 아직 방문하지 않았다면, cnt 증가
 		if(!visited[start]) {
@@ -48,22 +44,9 @@ public class BOJ2606_Virus {
 		
 		for(int i=1; i<=N; i++) {
 			//다음 직접 연결된 노드 dfs처리
-			if(computers[start][i]==1)
+			if(computers[start][i]==1 && !visited[i])
 				dfs(i);
 		}
 	}
 	
-	*/
-	
-	public static void dfs(int start) {
-		for(int i=1; i<=N; i++) {
-			//직접 연결되어 있고, 아직 방문하지 않았다면
-			if(computers[start][i]==1 && !visited[i]) {
-				//방문 한 다음 check
-				cnt++; visited[i]=true;
-				//그 노드에 대한 dfs 수행
-				dfs(i);
-			}
-		}
-	}
-	
+}
