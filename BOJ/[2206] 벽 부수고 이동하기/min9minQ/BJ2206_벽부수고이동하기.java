@@ -64,12 +64,12 @@ public class BJ2206_벽부수고이동하기 {
 			for(int i = 0; i < size; i++) {
 				Point temp = que.poll();
 				
-				if(temp.x == N-1 && temp.y == M-1)
-					return;
-				
 				for(int j = 0 ; j < 4; j++) {
 					int nx = temp.x + dx[j];
 					int ny = temp.y + dy[j];
+					
+					if(temp.x == N-1 && temp.y == M-1)
+					return;
 					
 					if(nx >= 0 && nx < N && ny >= 0 && ny < M && visit[nx][ny] == false) {
 						if(map[nx][ny] == 0) {
