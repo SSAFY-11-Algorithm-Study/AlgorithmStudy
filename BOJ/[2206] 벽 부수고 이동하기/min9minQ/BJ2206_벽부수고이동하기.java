@@ -68,7 +68,7 @@ public class BJ2206_벽부수고이동하기 {
 					int nx = temp.x + dx[j];
 					int ny = temp.y + dy[j];
 					
-					if(temp.x == N-1 && temp.y == M-1)
+					if(nx == N-1 && ny == M-1)
 					return;
 					
 					if(nx >= 0 && nx < N && ny >= 0 && ny < M && visit[nx][ny] == false) {
