@@ -68,7 +68,7 @@ public class Main {
 
                 } else if (map[nextR][nextC] == '1') {
 
-                    if (!cur.wall) {
+                    if (!cur.wall && !visited[nextR][nextC][1]) {
                         q.add(new Position(nextR, nextC, nextCnt, true));
                         visited[nextR][nextC][1] = true;
                     }
