@@ -92,7 +92,7 @@ public class BOJ4179 {
 		}
 	}
 
-	private static boolean moveJihoon(Queue<Position> jihoon) { // 불 이동시키기. bfs
+	private static boolean moveJihoon(Queue<Position> jihoon) { // 지훈 이동시키기. bfs
 		int size = jihoon.size();
 
 		for (int i = 0; i < size; i++) { // 지훈이 큐 사이즈만큼 반복
