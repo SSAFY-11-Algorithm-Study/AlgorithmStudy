@@ -1,3 +1,5 @@
+//DFS로 풀다가 실패해서, 그 부분만 블로그 참고함. (https://zoonvivor.tistory.com/145)
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
@@ -31,7 +33,7 @@ public class BOJ14500 {
 			}
 		}
 		
-		Rest();
+		Rest(); // 凸 모양은 dfs로 처리 안되므로
 		
 		System.out.println(answer);
 	}
@@ -58,11 +60,11 @@ public class BOJ14500 {
 	}
 	
 	private static void Rest() {
-		// 凸 모양은 dfs로 처리 안됨
 		
 		for (int i = 0; i < M; i++) { // 세로 세칸
 			for (int j = 0; j < N-2; j++) {
 				int sum = (paper[j][i] + paper[j+1][i] + paper[j+2][i]);
+				//중간에 앞, 뒤로 한칸씩 붙여보기
 				if(i+1<M) {
 					int tmp = sum;
 					tmp += paper[j+1][i+1];
@@ -79,6 +81,7 @@ public class BOJ14500 {
 		for (int i = 0; i < N; i++) { // 가로 세칸
 			for (int j = 0; j < M-2; j++) {
 				int sum = (paper[i][j] + paper[i][j+1] + paper[i][j+2]);
+				//중간에 위, 아래로 한칸씩 붙여보기
 				if(i+1<N) {
 					int tmp = sum;
 					tmp += paper[i+1][j+1];
