@@ -1,5 +1,3 @@
-// 왜 안되는가...
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -10,7 +8,8 @@ public class Main {
     static char[][] map;
     static int[] dr = {-1, 0, 1, 0};
     static int[] dc = {0, 1, 0, -1};
-    static ArrayList<int[]> fireList;
+    static Queue<int[]> fireList;
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         R = sc.nextInt();
@@ -19,7 +18,7 @@ public class Main {
         map = new char[R][C];
         int startR = 0;
         int startC = 0;
-        fireList = new ArrayList<>();
+        fireList = new LinkedList<>();
         sc.nextLine();
         for (int i = 0; i < R; i++) {
             map[i] = sc.nextLine().toCharArray();
@@ -32,9 +31,7 @@ public class Main {
                 }
             }
         }
-
         bfs(startR, startC);
-
         if (answer != -1) {
             System.out.println(answer);
         }
@@ -46,25 +43,20 @@ public class Main {
         q.add(new int[]{r, c});
         visit[r][c] = true;
         int time = 0;
-
         while (!q.isEmpty()) {
             time++;
-            fireSpread(time);
+            fireSpread();
             int size = q.size();
             for (int i = 0; i < size; i++) {
                 int[] cur = q.poll();
-
                 if (cur[0] == R - 1 || cur[1] == C - 1 || cur[0] == 0 || cur[1] == 0) {
                     answer = time;
                     return;
                 }
-
                 for (int j = 0; j < 4; j++) {
                     int nextR = cur[0] + dr[j];
                     int nextC = cur[1] + dc[j];
-
                     if (nextR < 0 || nextR >= R || nextC < 0 || nextC >= C || visit[nextR][nextC]) continue;
-
                     if (map[nextR][nextC] == '.') {
                         q.add(new int[]{nextR, nextC});
                         visit[nextR][nextC] = true;
@@ -75,17 +67,15 @@ public class Main {
         System.out.println("IMPOSSIBLE");
     }
 
-    private static void fireSpread(int time) {
+    private static void fireSpread() {
         int size = fireList.size();
         for (int i = 0; i < size; i++) {
-            int[] fire = fireList.get(i);
+            int[] fire = fireList.poll();
             for (int j = 0; j < 4; j++) {
-                int nextR = fire[0] + dr[j] * time;
-                int nextC = fire[1] + dc[j] * time;
-
+                int nextR = fire[0] + dr[j];
+                int nextC = fire[1] + dc[j];
                 if (nextR < 0 || nextR >= R || nextC < 0 || nextC >= C) continue;
-
-                if (map[nextR][nextC] == '.' && map[nextR - dr[j]][nextC - dc[j]] == 'F') {
+                if (map[nextR][nextC] == '.') {
                     map[nextR][nextC] = 'F';
                     fireList.add(new int[]{nextR, nextC});
                 }
