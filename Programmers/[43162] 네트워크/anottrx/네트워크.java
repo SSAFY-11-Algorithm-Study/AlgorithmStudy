@@ -7,8 +7,7 @@ class Solution {
             if(visited[i]) { // 만약 해당 컴퓨터가 네트워크 연결되었다면 아래 무시
                 continue;
             }
-            visited[i] = true; // 그외의 경우는 네트워크 연결시키고, answer 1 추가
-            answer++;
+            answer++; // 새로 연결하는 거라 answer 1 추가
             
             findNetwork(n, i, computers, visited); // dfs
         }
