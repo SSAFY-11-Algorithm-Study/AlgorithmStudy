@@ -1,4 +1,4 @@
-// 6 ~ 10, 13 테케 실패
+// 리팩토링 필요,,
 
 import java.util.*;
 
@@ -15,22 +15,21 @@ class Solution {
         newTable = new int[L][L];
         init(game_board, table);
         
-        for(int r = 0; r < 5; r++) {
-            for(int rT = 0; rT < 5; rT++) {
-                for(int i = 0; i < L; i++) {
-                    for(int j = 0; j < L; j++) {
-                        if(newBoard[i][j] > 0) {
-                            int[] index = findFirstIndex(newBoard[i][j]);
-                            if(index[0] == -1) continue;
-                            else fill(i, j, index);
+        for(int r = 0; r < 4; r++) {
+            for(int i = 0; i < L; i++) {
+                for(int j = 0; j < L; j++) {
+                    if(newBoard[i][j] > 0) {
+                        for(int a = 0; a < L; a++) {
+                            for(int b = 0; b < L; b++) {
+                                if(newBoard[i][j] == newTable[a][b]) {
+                                    fill(i, j, new int[]{a, b});
+                                }
+                            }
                         }
                     }
                 }
-                rotateTable();
-                // rotateBoard();
             }
             rotateBoard();
-            // rotateTable();
         }
         
         return answer;
@@ -94,29 +93,6 @@ class Solution {
         for (int i = 0; i < L; i++) {
             newBoard[i] = copy[i].clone();
         }
-    }
-    
-    public void rotateTable() {
-        int[][] copy = new int[L][L];
-
-        for (int i = 0; i < L; i++) {
-            for (int j = 0; j < L; j++) {
-                copy[i][j] = newTable[L - 1 - j][i];
-            }
-        }
-
-        for (int i = 0; i < L; i++) {
-            newTable[i] = copy[i].clone();
-        }
-    }
-    
-    public int[] findFirstIndex(int num) {
-        for(int i = 0; i < L; i++) {
-            for(int j = 0; j < L; j++) {
-                if(newTable[i][j] == num) return new int[]{i, j};
-            }
-        }
-        return new int[]{-1, -1};
     }
     
     public void fill(int r, int c, int[] index) {
