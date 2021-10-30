@@ -152,6 +152,6 @@ class Solution {
 				}
 			}
 		}
-		return 0;
+		return 0; // 해당 빈칸에 맞는 퍼즐조각이 없으므로 0을 리턴 (계산에 영향 X)
 	}
 }
