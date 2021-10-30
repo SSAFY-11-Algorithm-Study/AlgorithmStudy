@@ -1,5 +1,3 @@
-// 리팩토링 필요,,
-
 import java.util.*;
 
 class Solution {
@@ -13,16 +11,17 @@ class Solution {
         L = game_board.length;
         newBoard = new int[L][L];
         newTable = new int[L][L];
-        init(game_board, table);
+        init(game_board, table); // 새로운 newBoard와 newTable을 만든다.
         
-        for(int r = 0; r < 4; r++) {
+        for(int r = 0; r < 4; r++) { // newBoard를 90도씩 돌리며 4번 확인한다.
             for(int i = 0; i < L; i++) {
                 for(int j = 0; j < L; j++) {
-                    if(newBoard[i][j] > 0) {
+                    int n = newBoard[i][j]; // newBoard의 칸마다 보면서
+                    if(n > 0) { // 0보다 크다면
                         for(int a = 0; a < L; a++) {
                             for(int b = 0; b < L; b++) {
-                                if(newBoard[i][j] == newTable[a][b]) {
-                                    fill(i, j, new int[]{a, b});
+                                if(n == newTable[a][b]) { // newTable에서 같은 수를 가진 칸을 찾아 채울수있는지 확인.
+                                    fill(i, j, a, b);
                                 }
                             }
                         }
@@ -35,7 +34,7 @@ class Solution {
         return answer;
     }
     
-    public void init(int[][] game_board, int[][] table) {
+    public void init(int[][] game_board, int[][] table) { // 도형이 들어갈 칸은 그 크기의 수로 초기화한다.
         for(int i = 0; i < L; i++) {
             for(int j = 0; j < L; j++) {
                 if(game_board[i][j] == 0) {
@@ -95,12 +94,12 @@ class Solution {
         }
     }
     
-    public void fill(int r, int c, int[] index) {
+    public void fill(int r, int c, int a, int b) { // bfs로 채워 넣을수 있는지 확인.
         int num = newBoard[r][c];
         boolean[][] visitB = new boolean[L][L];
         Queue<int[]> q = new LinkedList<>();
         Queue<int[]> tmpQ = new LinkedList<>();
-        q.add(new int[]{r, c, index[0], index[1]});
+        q.add(new int[]{r, c, a, b});
         visitB[r][c] = true;
         
         while(!q.isEmpty()) {
@@ -123,10 +122,10 @@ class Solution {
             }
         }
         
-        if(num != tmpQ.size()) return;
+        if(num != tmpQ.size()) return; // num과 tmpQ의 크기가 같아야 채워 넣을수 있다.
         
         answer += num;
-        while(!tmpQ.isEmpty()) {
+        while(!tmpQ.isEmpty()) { // 채워 넣을수 있다면 newBoard와 newTable의 숫자를 -1로 바꾼다.
             int[] cur = tmpQ.poll();
             newBoard[cur[0]][cur[1]] = -1;
             newTable[cur[2]][cur[3]] = -1;
