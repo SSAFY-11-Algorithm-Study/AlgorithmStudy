@@ -1,4 +1,4 @@
-// 답이 이상하게 나와서 다시 풀어야합니다
+// 답이 이상하게 나와서 다시 풀어야합니다ㅠ
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,7 +14,7 @@ public class PROG86052 {
 
 	public static void main(String[] args) {
 //		String[] grid = { "S" };
-		String[] grid = { "SL","LR" };
+		String[] grid = { "SL", "LR" };
 //		String[] grid = { "R", "R" };
 		int[] answer;
 
@@ -31,13 +31,15 @@ public class PROG86052 {
 			for (int i = 0; i < N; i++) {
 				for (int j = 0; j < M; j++) {
 					if (!visited[k][i][j]) {
-						getCycle(i, j, k, i, j, 1, visited);
+						cnt = 1;
+						getCycle(i, j, k, i, j, visited);
+						cycleCntArr.add(cnt);
 					}
 				}
 			}
 		}
 
-		Collections.sort(cycleCntArr); // 
+		Collections.sort(cycleCntArr);
 		answer = new int[cycleCntArr.size()];
 		for (int i = 0; i < answer.length; i++) {
 			answer[i] = cycleCntArr.get(i);
@@ -48,50 +50,23 @@ public class PROG86052 {
 //		return answer;
 	}
 
-	private static void getCycle(int x, int y, int dir, int startX, int startY, int cnt, boolean[][][] visited) {
-		visited[dir][x][y] = true;
+	private static void getCycle(int x, int y, int dir, int startX, int startY, boolean[][][] visited) {
+		while (true) {
+			visited[dir][x][y] = true;
 
-		if (map[x][y] == 'S') {
-			int dx = getPosition(x, dir, 0, N);
-			int dy = getPosition(y, dir, 1, M);
-//			if (dx == startX && dy == startY ) {
-//				cycleCntArr.add(cnt);
-//				visited[dir][dx][dy] = true;
-//				return;
-//			} else
-			if (!visited[dir][dx][dy]) {
-				getCycle(dx, dy, dir, startX, startY, cnt + 1, visited);
-			} else {
-				cycleCntArr.add(cnt);
+			if (map[x][y] == 'L') {
+				dir = dL[dir];
+			} else if (map[x][y] == 'R') {
+				dir = dR[dir];
 			}
-		} else if (map[x][y] == 'L') {
-			dir = dL[dir];
-			int dx = getPosition(x, dir, 0, N);
-			int dy = getPosition(y, dir, 1, M);
-//			if (dx == startX && dy == startY) {
-//				cycleCntArr.add(cnt);
-//				visited[dir][dx][dy] = true;
-//				return;
-//			} else
-			if (!visited[dir][dx][dy]) {
-				getCycle(dx, dy, dir, startX, startY, cnt + 1, visited);
-			} else {
-				cycleCntArr.add(cnt);
+
+			x = getPosition(x, dir, 0, N);
+			y = getPosition(y, dir, 1, M);
+			if (visited[dir][x][y]) {
+				break;
 			}
-		} else if (map[x][y] == 'R') {
-			dir = dR[dir];
-			int dx = getPosition(x, dir, 0, N);
-			int dy = getPosition(y, dir, 1, M);
-//			if (dx == startX && dy == startY) {
-//				cycleCntArr.add(cnt);
-//				visited[dir][dx][dy] = true;
-//				return;
-//			} else 
-			if (!visited[dir][dx][dy]) {
-				getCycle(dx, dy, dir, startX, startY, cnt + 1, visited);
-			} else {
-				cycleCntArr.add(cnt);
-			}
+
+			cnt++;
 		}
 	}
 
@@ -103,3 +78,4 @@ public class PROG86052 {
 		return (dd % len);
 	}
 }
+
