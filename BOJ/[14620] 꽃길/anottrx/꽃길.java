@@ -1,5 +1,3 @@
-// 조합으로 풀었는데 틀려서 다른 방법으로 다시 풀 예정입니다
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -22,9 +20,7 @@ public class Main {
 			st = new StringTokenizer(br.readLine());
 			for (int j = 0; j < N; j++) {
 				map[i][j] = Integer.parseInt(st.nextToken());
-				if (map[i][j] > 0) {
-					seedList.add(new int[] { i, j });
-				}
+                seedList.add(new int[] { i, j });
 			}
 		}
 		seedCnt = seedList.size();
