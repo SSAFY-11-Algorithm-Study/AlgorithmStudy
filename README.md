@@ -10,7 +10,7 @@
 | [wangsuuu](https://github.com/wangsuuu) | [alstjdwo1601](https://github.com/alstjdwo1601) | [min9minQ](https://github.com/min9minQ) | [penglingss](https://github.com/penglingss) | [anottrx](https://github.com/anottrx)|
 |:-------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|
 
-### 🗓 일정
+### 🗓 일정 
 | |wangsuuu|alstjdwo1601|min9minQ|penglingss|anottrx|
 | :-: | :-: | :-: | :-: | :-: | :-: |
 | 1주차<br>(07.25 ~ 07.31) | [음계](https://www.acmicpc.net/problem/2920) | [문자열](https://www.acmicpc.net/problem/1120)    | [괄호](https://www.acmicpc.net/problem/9012) |  [단어 정렬](https://www.acmicpc.net/problem/1181) | [덩치](https://www.acmicpc.net/problem/7568) |
