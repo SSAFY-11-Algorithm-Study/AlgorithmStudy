@@ -52,7 +52,7 @@ public class BJ1753_최단경로 {
 			int weight = Integer.parseInt(st.nextToken());
 			list[start].add(new Node(end,weight));
 		}
-		
+		 
 		dikjstra();
 		
 		for(int i = 1; i <= V; i++) {
