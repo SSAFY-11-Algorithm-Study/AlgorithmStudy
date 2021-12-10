@@ -28,24 +28,8 @@ class Solution {
             int cost = road[i][2];
 
             // 두 마을 a, b를 연결하는 도로는 여러 개가 있을 수 있습니다.
-            boolean canAdd = true;
-            ArrayList<Node> curNodeList = village[to];
-            finding: for (Node node : curNodeList) {
-                if (node.end == to) {
-                    if (node.cost > cost) {
-                        village[to].remove(node);
-                        Node otherNode = new Node(from, cost);
-                        village[from].remove(otherNode);
-                    } else {
-                        canAdd = false;
-                    }
-                    break finding;
-                }
-            }
-            if (canAdd) {
-                village[to].add(new Node(from, cost));
-                village[from].add(new Node(to, cost));
-            }
+            village[to].add(new Node(from, cost));
+            village[from].add(new Node(to, cost));
         }
 
         // 다익스트라
