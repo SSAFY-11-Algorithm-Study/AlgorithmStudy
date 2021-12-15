@@ -1,3 +1,5 @@
+// https://coder-in-war.tistory.com/entry/BOJ-JAVA11779-%EC%B5%9C%EC%86%8C%EB%B9%84%EC%9A%A9-%EA%B5%AC%ED%95%98%EA%B8%B0-2 참고했습니다
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -62,24 +64,23 @@ public class BOJ11779 {
                     if (dist[edge.end] > dist[cur.end] + edge.cost) {
                         dist[edge.end] = dist[cur.end] + edge.cost;
                         pq.offer(new Edge(edge.end, dist[edge.end]));
-                        // System.out.println(edge.end + " " + cur.end);
-                        path[edge.end] = cur.end;
+                        path[edge.end] = cur.end; // 어디서 간 건지 저장
                     }
                 }
             }
         }
 
         ArrayList<Integer> pathList = new ArrayList<>();
-        int num = end;
+        int num = end; // 도착지점부터 시작해서 시작지점으로 가기
         while (num != 0) {
             pathList.add(num);
             num = path[num];
         }
 
-        sb.append(dist[end] + "\n");
-        sb.append(pathList.size() + "\n");
-        for (int i = pathList.size() - 1; i >= 0; i--) {
-            sb.append(pathList.get(i) + " ");
+        sb.append(dist[end] + "\n"); // 출발 도시에서 도착 도시까지 가는데 드는 최소 비용
+        sb.append(pathList.size() + "\n"); // 최소 비용을 갖는 경로에 포함되어있는 도시의 개수를 출력
+        for (int i = pathList.size() - 1; i >= 0; i--) { // 리스트에는 뒤에서부터 저장되어 있기 때문에 역순으로 출력
+            sb.append(pathList.get(i) + " "); // 최소 비용을 갖는 경로를 방문하는 도시 순서대로 출력
         }
         return sb.toString();
     }
