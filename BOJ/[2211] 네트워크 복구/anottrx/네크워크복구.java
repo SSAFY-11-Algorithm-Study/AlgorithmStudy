@@ -9,14 +9,14 @@ import java.util.StringTokenizer;
 public class BOJ2211 {
 
     static class Edge implements Comparable<Edge> {
-        int from, to, cost;
+        int to, cost;
 
-        public Edge(int f, int t, int c) {
-            this.from = f;
+        public Edge(int t, int c) {
             this.to = t;
             this.cost = c;
         }
 
+        @Override
         public int compareTo(Edge o) {
             return this.cost - o.cost;
         }
@@ -36,8 +36,8 @@ public class BOJ2211 {
             int from = Integer.parseInt(st.nextToken());
             int to = Integer.parseInt(st.nextToken());
             int cost = Integer.parseInt(st.nextToken());
-            computerList[from].add(new Edge(from, to, cost));
-            computerList[to].add(new Edge(to, from, cost));
+            computerList[from].add(new Edge(to, cost));
+            computerList[to].add(new Edge(from, cost));
         }
 
         String answer = dijkstra(N, computerList, 1);
@@ -47,7 +47,7 @@ public class BOJ2211 {
     private static String dijkstra(int N, ArrayList<Edge>[] computerList, int start) {
         StringBuilder sb = new StringBuilder();
         PriorityQueue<Edge> pq = new PriorityQueue<>();
-        pq.offer(new Edge(start, start, 0));
+        pq.offer(new Edge(start, 0));
         int[] dist = new int[N + 1];
         Arrays.fill(dist, 100001);
         int[] from = new int[N + 1];
@@ -58,26 +58,19 @@ public class BOJ2211 {
             if (dist[cur.to] >= cur.cost) {
                 for (Edge edge : computerList[cur.to]) {
                     if (dist[edge.to] > dist[cur.to] + edge.cost) {
-                        // System.out.println(edge.from + " , " + edge.to);
                         dist[edge.to] = dist[cur.to] + edge.cost;
-                        from[edge.to] = edge.from;
-                        pq.offer(new Edge(edge.from, edge.to, dist[edge.to]));
+                        from[edge.to] = cur.to;
+                        pq.offer(new Edge(edge.to, dist[edge.to]));
                     }
                 }
             }
         }
 
-        int cnt = 0;
-        for (int i = 1; i < N + 1; i++) {
-            if (dist[i] != 0 && dist[i] != 100001) {
-                cnt++;
-            }
-        }
-        sb.append(cnt + "\n");
+        // 따라서 네트워크를 복구한 후에 서로 다른 두 컴퓨터 간에 통신이 가능하도록 복구해야 한다.
+        sb.append((N - 1) + "\n");
         for (int i = 2; i < N + 1; i++) {
             sb.append(i + " " + from[i] + "\n");
         }
-
         return sb.substring(0, sb.length() - 1);
     }
 }
