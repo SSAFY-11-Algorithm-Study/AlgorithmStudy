@@ -35,8 +35,9 @@ public class BOJ2448_MakingStar {
 		}
 		
 		//기존에 있던 위 삼각형 하나는 공백을 주기
-		int blankCnt = newEnd-newStart+1;
+		int blankCnt = newEnd-newStart+1; //채워넣을 공백 수 계산
 		String blank= "";
+		
 		for(int a=0; a<blankCnt; a++){
 			blank += " ";
 		}
