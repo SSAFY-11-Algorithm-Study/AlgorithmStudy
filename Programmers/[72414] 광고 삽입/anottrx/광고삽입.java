@@ -5,12 +5,10 @@ class Solution {
         int playTime = changeToSec(play_time); // 동영상 전체 재생시간
         int[] cnt = new int[playTime + 1]; // 시청 중인 시청자 수를 초단위로 센 리스트
         int advTime = changeToSec(adv_time); // 광고 시간
-        int[] watch = new int[logs.length]; // 죠르디 동영상 재생한 구간을 초단위로 바꾼 리스트
-        for (int i = 0; i < watch.length; i++) {
+        for (int i = 0; i < logs.length; i++) {
             String[] tempTime = logs[i].split("-");
             int startTime = changeToSec(tempTime[0]);
             int endTime = changeToSec(tempTime[1]);
-            watch[i] = endTime - startTime;
             for (int j = startTime; j < endTime; j++) {
                 cnt[j]++; // 시청 중인 시청자 수 세기
             }
