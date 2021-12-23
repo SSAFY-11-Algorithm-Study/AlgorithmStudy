@@ -11,6 +11,7 @@
 |:-------------------:|:-------------------:|:-------------------:|:-------------------:|:-------------------:|
 
 ### 🗓 일정 
+#### 2021년
 | |wangsuuu|alstjdwo1601|min9minQ|penglingss|anottrx|
 | :-: | :-: | :-: | :-: | :-: | :-: |
 | 1주차<br>(07.25 ~ 07.31) | [음계](https://www.acmicpc.net/problem/2920) | [문자열](https://www.acmicpc.net/problem/1120)    | [괄호](https://www.acmicpc.net/problem/9012) |  [단어 정렬](https://www.acmicpc.net/problem/1181) | [덩치](https://www.acmicpc.net/problem/7568) |
@@ -34,3 +35,8 @@
 | 19주차<br>(12.02 ~ 12.08) | [최단경로](https://www.acmicpc.net/problem/1753) | [해킹](https://www.acmicpc.net/problem/10282) | [별자리 만들기](https://www.acmicpc.net/problem/4386) | [배달](https://programmers.co.kr/learn/courses/30/lessons/12978) | [플로이드](https://www.acmicpc.net/problem/11404) |
 | 20주차<br>(12.09 ~ 12.15) | [운동](https://www.acmicpc.net/problem/1956) | [파티](https://www.acmicpc.net/problem/1238) | [최소비용 구하기2](https://www.acmicpc.net/problem/11779) | [섬 연결하기](https://programmers.co.kr/learn/courses/30/lessons/42861) | [네트워크 복구](https://www.acmicpc.net/problem/2211) |
 | 21주차<br>(12.16 ~ 12.22) | [H-Index](https://programmers.co.kr/learn/courses/30/lessons/42747) | [용액](https://www.acmicpc.net/problem/2467) | [1학년](https://www.acmicpc.net/problem/5557) | [광고 삽입](https://programmers.co.kr/learn/courses/30/lessons/72414) | [별 찍기 - 11](https://www.acmicpc.net/problem/2448) |
+
+#### 2022년
+| |wangsuuu|alstjdwo1601|min9minQ|anottrx|
+| :-: | :-: | :-: | :-: | :-: |
+| 22주차<br>(12.23 ~ 01.05) | :-: | :-: | :-: | [자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059) |
