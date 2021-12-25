@@ -46,4 +46,4 @@
 #### 2022년
 | |wangsuuu|alstjdwo1601|min9minQ|anottrx|
 | :-: | :-: | :-: | :-: | :-: |
-| 22주차<br>(12.23 ~ 01.05) | [보물섬](https://www.acmicpc.net/problem/2589) | :-: | :-: | [자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059) |
+| 22주차<br>(12.23 ~ 01.05) | [보물섬](https://www.acmicpc.net/problem/2589) | :-: | [로봇](https://www.acmicpc.net/problem/1726) | [자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059) |
