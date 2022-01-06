@@ -1,5 +1,3 @@
-package week22;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -47,7 +45,6 @@ public class BOJ2933_Mineral {
 			}
 			System.out.println();
 		}
-		
 	}
 	
 	private static void solve() { //bfs 사용
@@ -73,7 +70,7 @@ public class BOJ2933_Mineral {
 				}
 			}
 		}
-		up_cluster = new ArrayList<>();
+		up_cluster = new ArrayList<>(); //공중에 떠 있는 클러스터를 저장할 리스트
 		
 		for(int i=0; i<R; i++) {
 			for(int j=0; j<C; j++) {
@@ -87,14 +84,13 @@ public class BOJ2933_Mineral {
 	private static void Reclustering() { //미네랄을 밑으로 이동시킴
 		
 		//떠 있는 미네랄들을 모두 .로 바꿈(몇 칸 내려가야 하는지 계산하는 과정에서 떠 있는 미네랄들끼리 영향을 주지 않게 하기 위해)
-		
 		for(int[] cluster : up_cluster) {
 			map[cluster[0]][cluster[1]] = '.';
 		}
 		
 		int cnt=0; //몇 칸 내려가야 하는지 계산
 		
-		here : while(up_cluster.size()!=0) {
+		here : while(up_cluster.size()!=0) { //while(true)로 두면, up_cluster가 없는 경우에는 무한루프에 빠짐..
 			for(int[] cluster : up_cluster) {
 				int x = cluster[0];
 				int y = cluster[1];
