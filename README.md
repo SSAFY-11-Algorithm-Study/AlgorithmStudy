@@ -47,3 +47,4 @@
 | |wangsuuu|alstjdwo1601|min9minQ|anottrx|
 | :-: | :-: | :-: | :-: | :-: |
 | 22주차<br>(12.23 ~ 01.05) | [보물섬](https://www.acmicpc.net/problem/2589) | [미네랄](https://www.acmicpc.net/problem/2933) | [로봇](https://www.acmicpc.net/problem/1726) | [자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059) |
+| 23주차<br>(01.06 ~ 01.12) | :-: | :-: | :-: | [쉬운 계단 수](https://www.acmicpc.net/problem/10844) |
