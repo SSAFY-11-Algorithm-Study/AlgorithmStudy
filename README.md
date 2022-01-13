@@ -51,4 +51,4 @@
 
 | |wangsuuu|min9minQ|anottrx|공동선정|
 | :-: | :-: | :-: | :-: | :-: |
-| 24주차<br>(01.13 ~ 01.19) | :-: | :-: | [부등호](https://www.acmicpc.net/problem/2529) | :-: |
+| 24주차<br>(01.13 ~ 01.19) | [좋은수열](https://www.acmicpc.net/problem/2661) | :-: | [부등호](https://www.acmicpc.net/problem/2529) | :-: |
