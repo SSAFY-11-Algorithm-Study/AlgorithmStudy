@@ -48,3 +48,7 @@
 | :-: | :-: | :-: | :-: | :-: |
 | 22주차<br>(12.23 ~ 01.05) | [보물섬](https://www.acmicpc.net/problem/2589) | [미네랄](https://www.acmicpc.net/problem/2933) | [로봇](https://www.acmicpc.net/problem/1726) | [자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059) |
 | 23주차<br>(01.06 ~ 01.12) | [뱀](https://www.acmicpc.net/problem/3190) | [공유기 설치](https://www.acmicpc.net/problem/2110) | [욕심쟁이 판다](https://www.acmicpc.net/problem/1937) | [쉬운 계단 수](https://www.acmicpc.net/problem/10844) |
+
+| |wangsuuu|min9minQ|anottrx|공동선정|
+| :-: | :-: | :-: | :-: | :-: |
+| 24주차<br>(01.13 ~ 01.19) | :-: | :-: | [부등호](https://www.acmicpc.net/problem/2529) | :-: |
