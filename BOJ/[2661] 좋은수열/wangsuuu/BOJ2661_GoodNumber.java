@@ -17,7 +17,7 @@ public class BOJ2661_GoodNumber {
 			return;
 		if(string.length() == N) { //종료 조건
 			if(GoodNumber(string)) {
-				flag=true;
+				flag=true;//가장 먼저 구해지는 정답이 가장 작은 수임.
 				answer = string;
 				return;
 			}
