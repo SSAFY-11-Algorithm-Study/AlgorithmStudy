@@ -1,3 +1,5 @@
+//답은 맞는데 메모리 초과...
+
 package time24;
 
 import java.util.ArrayList;
