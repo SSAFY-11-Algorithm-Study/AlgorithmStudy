@@ -22,7 +22,7 @@ public class BJ2661_좋은수열 {
 		
 		Collections.sort(result);
 		
-		System.out.println(result.get(0));
+		System.out.println(result.get(0)); 
 
 	}
 
