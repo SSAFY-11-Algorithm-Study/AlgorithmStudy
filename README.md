@@ -53,3 +53,4 @@
 | :-: | :-: | :-: | :-: | :-: |
 | 24주차<br>(01.13 ~ 01.19) | [좋은수열](https://www.acmicpc.net/problem/2661) | [Puyo Puyo](https://www.acmicpc.net/problem/11559) | [부등호](https://www.acmicpc.net/problem/2529) | [캐시](https://programmers.co.kr/learn/courses/30/lessons/17680) |
 | 25주차<br>(01.20 ~ 01.26) | [연산자 끼워넣기](https://www.acmicpc.net/problem/14888) | [격자상의 경로](https://www.acmicpc.net/problem/10164) | [신입 사원](https://www.acmicpc.net/problem/1946) | [등수 구하기](https://www.acmicpc.net/problem/1205) |
+| 26주차<br>(01.27 ~ 02.02) | [특정 거리의 도시](https://www.acmicpc.net/problem/18352) | :-: | :-: | :-: |
