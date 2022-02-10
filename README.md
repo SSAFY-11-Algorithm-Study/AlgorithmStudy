@@ -55,3 +55,4 @@
 | 25주차<br>(01.20 ~ 01.26) | [연산자 끼워넣기](https://www.acmicpc.net/problem/14888) | [격자상의 경로](https://www.acmicpc.net/problem/10164) | [신입 사원](https://www.acmicpc.net/problem/1946) | [등수 구하기](https://www.acmicpc.net/problem/1205) |
 | 26주차<br>(01.27 ~ 02.02) | [특정 거리의 도시](https://www.acmicpc.net/problem/18352) | [순위](https://programmers.co.kr/learn/courses/30/lessons/49191) | [카카오프렌즈 컬러링북](https://programmers.co.kr/learn/courses/30/lessons/1829) | [결혼식](https://www.acmicpc.net/problem/5567) |
 | 27주차<br>(02.03 ~ 02.09) | [알고스팟](https://www.acmicpc.net/problem/1261) | [특정한 최단 경로](https://www.acmicpc.net/problem/1504) | [프렌즈4블록](https://programmers.co.kr/learn/courses/30/lessons/17679) | [마인크래프트](https://www.acmicpc.net/problem/18111) |
+| 28주차<br>(02.10 ~ 02.23) | :-: | :-: | [더 맵게](https://programmers.co.kr/learn/courses/30/lessons/42626) | :-: |
