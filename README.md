@@ -59,4 +59,4 @@
 
 | |wangsuuu|wangsuuu|anottrx|anottrx|
 | :-: | :-: | :-: | :-: | :-: |
-| 29주차<br>(02.24 ~ 03.02) | :-: | :-: | [프린터](https://programmers.co.kr/learn/courses/30/lessons/42587) | :-: |
+| 29주차<br>(02.24 ~ 03.02) | :-: | :-: | [프린터](https://programmers.co.kr/learn/courses/30/lessons/42587) | [카펫](https://programmers.co.kr/learn/courses/30/lessons/42842) |
