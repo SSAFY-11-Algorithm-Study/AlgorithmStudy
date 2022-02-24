@@ -56,3 +56,7 @@
 | 26주차<br>(01.27 ~ 02.02) | [특정 거리의 도시](https://www.acmicpc.net/problem/18352) | [순위](https://programmers.co.kr/learn/courses/30/lessons/49191) | [카카오프렌즈 컬러링북](https://programmers.co.kr/learn/courses/30/lessons/1829) | [결혼식](https://www.acmicpc.net/problem/5567) |
 | 27주차<br>(02.03 ~ 02.09) | [알고스팟](https://www.acmicpc.net/problem/1261) | [특정한 최단 경로](https://www.acmicpc.net/problem/1504) | [프렌즈4블록](https://programmers.co.kr/learn/courses/30/lessons/17679) | [마인크래프트](https://www.acmicpc.net/problem/18111) |
 | 28주차<br>(02.10 ~ 02.23) | [대칭 차집합](https://www.acmicpc.net/problem/1269) | [A → B](https://www.acmicpc.net/problem/16953) | [더 맵게](https://programmers.co.kr/learn/courses/30/lessons/42626) | [숫자 카드](https://www.acmicpc.net/problem/10815) |
+
+| |wangsuuu|wangsuuu|anottrx|anottrx|
+| :-: | :-: | :-: | :-: | :-: |
+| 29주차<br>(02.24 ~ 03.02) | :-: | :-: | [프린터](https://programmers.co.kr/learn/courses/30/lessons/42587) | :-: |
