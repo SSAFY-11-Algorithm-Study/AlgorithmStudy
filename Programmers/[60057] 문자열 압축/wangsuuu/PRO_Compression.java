@@ -1,4 +1,5 @@
 import java.util.*;
+//테케 다 맞는데 돌려보면 28점ㅠ
 class Solution {
     public int solution(String s) {
         int answer = 100000;
