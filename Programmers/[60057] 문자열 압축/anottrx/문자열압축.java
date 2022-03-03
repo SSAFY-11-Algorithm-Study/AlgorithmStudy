@@ -1,11 +1,10 @@
 class Solution {
     public int solution(String s) {
-        int answer = Integer.MAX_VALUE; // 최댓값으로 초기화
-      
-        if (s.length() == 1) { // s 문자열 길이가 1이라면 그냥 바로 출력하고 끝
-            answer = 1;
-        } else {
-            // 1개부터 (s문자열 길이의 절반+1)까지 모두 한번씩 시도하기 => +1 안 하면 답 안나옴
+        int answer = s.length(); // 최댓값은 문자열 s 길이
+
+        // s 문자열 길이가 1이라면 그냥 바로 출력하고 끝낼 것
+        if (s.length() != 1) {
+            // 그외는 1개부터 (s문자열 길이의 절반+1)까지 모두 한번씩 시도하기 => +1 안 하면 답 안 나옴
             for (int i = 1; i < (s.length() / 2 + 1); i++) {
                 int cnt = 1; // 쪼갠 단위 개수는 1부터 시작
                 String checkStr = s.substring(0, i); // 처음부터 i개만큼 문자 우선 저장
