@@ -61,4 +61,4 @@
 | :-: | :-: | :-: | :-: | :-: |
 | 29주차<br>(02.24 ~ 03.02) | [문자열 압축](https://programmers.co.kr/learn/courses/30/lessons/60057) | [가장 먼 노드](https://programmers.co.kr/learn/courses/30/lessons/49189) | [프린터](https://programmers.co.kr/learn/courses/30/lessons/42587) | [카펫](https://programmers.co.kr/learn/courses/30/lessons/42842) |
 | 30주차<br>(03.03 ~ 03.09) | [124 나라의 숫자](https://programmers.co.kr/learn/courses/30/lessons/12899) | [주식가격](https://programmers.co.kr/learn/courses/30/lessons/42584) | [괄호 변환](https://programmers.co.kr/learn/courses/30/lessons/60058) | [입국심사](https://programmers.co.kr/learn/courses/30/lessons/43238) |
-| 31주차<br>(03.10 ~ 03.16) | :-: | :-: | [튜플](https://programmers.co.kr/learn/courses/30/lessons/64065) | [다음 큰 숫자](https://programmers.co.kr/learn/courses/30/lessons/12911) |
+| 31주차<br>(03.10 ~ 03.16) | [후보키](https://programmers.co.kr/learn/courses/30/lessons/42890) | :-: | [튜플](https://programmers.co.kr/learn/courses/30/lessons/64065) | [다음 큰 숫자](https://programmers.co.kr/learn/courses/30/lessons/12911) |
