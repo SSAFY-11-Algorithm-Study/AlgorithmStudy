@@ -1,78 +1,40 @@
-// 틀림 => 중간부터 꼬인 듯
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
+import java.util.*;
 
 class Solution {
     public int[] solution(String s) {
         int[] answer = {};
-        s = s.substring(1, s.length());
-        s = s.substring(0, s.length() - 1);
 
-        ArrayList<StringCount> arrList = new ArrayList<>();
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == '{') {
-                sb = new StringBuilder();
-            } else if (s.charAt(i) == '}') {
-                int cnt = 0;
-                for (int j = 0; j < sb.toString().length(); j++) {
-                    if (sb.toString().charAt(j) == ',') {
-                        cnt++;
-                    }
-                }
-                arrList.add(new StringCount(sb.toString(), cnt));
-                i++;
+        HashMap<Integer, Integer> hm = new HashMap<>();
+        s = s.replaceAll("\\{", "").replaceAll("\\}", ""); // {, } 제거
+        String[] strList = s.split(",");
+        for (int i = 0; i < strList.length; i++) { // 숫자 확인하면서 개수 세기
+            int tempNum = Integer.parseInt(strList[i]);
+            if (hm.containsKey(tempNum)) {
+                hm.put(tempNum, hm.get(tempNum) + 1);
             } else {
-                sb.append(s.charAt(i));
+                hm.put(tempNum, 1);
             }
         }
 
-        Collections.sort(arrList);
-
-        // 여기 아래부터 틀린 듯
-        ArrayList<Integer> ansewrList = new ArrayList<>();
-        HashSet<Integer> hs = new HashSet<>();
-        for (int i = 0; i < arrList.size(); i++) {
-            sb = new StringBuilder();
-            for (int j = 0; j < arrList.get(i).str.length(); j++) {
-                if (arrList.get(i).str.charAt(j) != ',') {
-                    sb.append(arrList.get(i).str.charAt(j));
+        ArrayList<int[]> arrList = new ArrayList<>();
+        for (int key : hm.keySet()) {
+            arrList.add(new int[] { key, hm.get(key) }); // {key, key개수}를 리스트에 담기
+        }
+        Collections.sort(arrList, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                if (o1[1] > o2[1]) {
+                    return -1;
                 } else {
-                    int num = Integer.parseInt(sb.toString());
-                    if (!hs.contains(num)) {
-                        hs.add(num);
-                        ansewrList.add(num);
-                    }
-                    sb = new StringBuilder();
+                    return 1;
                 }
             }
-        }
-        answer = new int[ansewrList.size()];
-        for (int i = 0; i < answer.length; i++) {
-            answer[i] = ansewrList.get(i);
+        });
+
+        answer = new int[arrList.size()]; // 답
+        for (int i = 0; i < arrList.size(); i++) {
+            answer[i] = arrList.get(i)[0];
         }
         return answer;
-    }
-    private static class StringCount implements Comparable<StringCount> {
-        private String str;
-        private int cnt;
-
-        public StringCount(String str, int cnt) {
-            this.str = str;
-            this.cnt = cnt;
-        }
-
-        @Override
-        public int compareTo(StringCount strcnt) {
-            if (strcnt.cnt < cnt) {
-                return 1;
-            } else if (strcnt.cnt > cnt) {
-                return -1;
-            }
-            return 0;
-        }
-
     }
 }
