@@ -1,3 +1,5 @@
+package week31;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
@@ -46,7 +48,8 @@ public class BOJ21610_WizardShark {
 			for(int j=0; j<size; j++) {
 				int[] c = clouds.poll();
 				int x = c[0]; int y = c[1];
-				int nx = Math.abs(N + dx[d] * (s%N) + x) % N; //s가 아니라 s % N
+				//수식 원리 참고 : https://dlee0129.tistory.com/215
+				int nx = Math.abs(N + dx[d] * (s%N) + x) % N; //s가 아니라 s % N. N번 이상 이동할 경우 N으로 나머지 연산한 결과와 같으므로
 				int ny = Math.abs(N + dy[d] * (s%N) + y) % N;
 				clouds.add(new int[] {nx, ny});
 				visited[nx][ny] = true;
