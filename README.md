@@ -63,4 +63,4 @@
 | 30주차<br>(03.03 ~ 03.09) | [124 나라의 숫자](https://programmers.co.kr/learn/courses/30/lessons/12899) | [주식가격](https://programmers.co.kr/learn/courses/30/lessons/42584) | [괄호 변환](https://programmers.co.kr/learn/courses/30/lessons/60058) | [입국심사](https://programmers.co.kr/learn/courses/30/lessons/43238) |
 | 31주차<br>(03.10 ~ 03.16) | [후보키](https://programmers.co.kr/learn/courses/30/lessons/42890) | [디스크 컨트롤러](https://programmers.co.kr/learn/courses/30/lessons/42627) | [튜플](https://programmers.co.kr/learn/courses/30/lessons/64065) | [다음 큰 숫자](https://programmers.co.kr/learn/courses/30/lessons/12911) |
 | 32주차<br>(03.17 ~ 03.30) | [짝지어 제거하기](https://programmers.co.kr/learn/courses/30/lessons/12973) | [마법사 상어와 비바라기](https://www.acmicpc.net/problem/21610) | [[3차] 방금그곡](https://programmers.co.kr/learn/courses/30/lessons/17683) | [멀리 뛰기](https://programmers.co.kr/learn/courses/30/lessons/12914) |
-| 33주차<br>(03.31 ~ 04.06) | :-: | :-: | :-: | [사다리 조작](https://www.acmicpc.net/problem/15684) |
+| 33주차<br>(03.31 ~ 04.06) | :-: | :-: | [행렬의 곱셈](https://programmers.co.kr/learn/courses/30/lessons/12949) | [사다리 조작](https://www.acmicpc.net/problem/15684) |
