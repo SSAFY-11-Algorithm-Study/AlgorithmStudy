@@ -1,5 +1,5 @@
 import java.util.*;
-//테케 1번만 틀리는데 왜 그런지 도저히 모르겠음ㅠ
+
 class Solution {
     
     static ArrayList<String> list = new ArrayList<>();
@@ -23,6 +23,7 @@ class Solution {
     public void dfs(int i, int cnt, String str, String[][] tickets){
 
         str += tickets[i][1] + " "; //도착지를 더해 감
+        visited[i] = true;
         
         if(cnt==tickets.length){ //표가 다 선택됐다면
             list.add(str);
@@ -32,9 +33,7 @@ class Solution {
         String target = tickets[i][1];
         for(int j=0; j<tickets.length; j++){
             if(!visited[j] && tickets[j][0].equals(target)){ //다음 티켓이 아직 선택 안됐고 이어진다면
-                visited[j] = true;
                 dfs(j, ++cnt, str, tickets);
-                visited[j] = false; //모든 가능한 경로를 탐색하므로 false 체크
             }
         }
     }
