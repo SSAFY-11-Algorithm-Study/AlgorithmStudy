@@ -1,5 +1,5 @@
 import java.util.*;
-
+//1번 테케만 안 되는데 왜 그런지 도저히 모르겠음ㅠ
 class Solution {
     
     static ArrayList<String> list = new ArrayList<>();
