@@ -2,6 +2,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+//정답 코드
+
 public class BOJ15684_Ladder {
 	
 	static int N, M, H;
@@ -60,15 +62,15 @@ public class BOJ15684_Ladder {
 				if(tmp[i][j]==0 && tmp[i][j+1] == 0) { //가로선이 그어져 있지 않다면
 					tmp[i][j] = 2;
 					tmp[i][j+1] = 1;
-					dfs(cnt+1, target); //++cnt가 아니라 cnt+1이어야 cnt는 변하지 않음
-					tmp[i][j] = tmp[i][j+1] = 0;
+					dfs(cnt+1, target); //++cnt가 아니라 cnt+1이어야 cnt 값이 변하지 않고, target까지만 늘어남.
+					tmp[i][j] = tmp[i][j+1] = 0; //백 트래킹. 이거 없으면 틀림(모든 경우의 수를 전부 확인해야 하므로. 근데 이해는 안감..)
 				}
 			}
 			
 		}
 		
 	}
-	private static boolean iToi() { //i가 i로 도착하는지 알아보는 길찾기 메서드 -> 수정해야 함
+	private static boolean iToi() {
 		
 		for(int i=0; i<N; i++) {
 			int x = 0, y = i;
