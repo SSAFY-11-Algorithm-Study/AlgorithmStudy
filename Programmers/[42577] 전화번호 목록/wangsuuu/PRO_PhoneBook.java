@@ -1,4 +1,5 @@
 import java.util.*;
+//처음에 너무 어렵게 생각했었음...ㅠㅜ
 class Solution {
     public boolean solution(String[] phone_book) {
         boolean answer = true;
