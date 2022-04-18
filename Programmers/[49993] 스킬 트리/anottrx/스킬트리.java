@@ -8,7 +8,7 @@ class Solution {
         int answer = 0;
 
         hmSkill = new HashMap<>();
-        for (int i = 1; i < skill.length(); i++) {
+        for (int i = 1; i < skill.length(); i++) { // key값의 직전 선행 스킬을 저장 (B, C), (D, B)
             hmSkill.put(skill.charAt(i), skill.charAt(i - 1)); // {이후, 이전}
         }
 
