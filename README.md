@@ -66,4 +66,4 @@
 | 33주차<br>(03.31 ~ 04.06) | [스킬 트리](https://programmers.co.kr/learn/courses/30/lessons/49993) | [여행 경로](https://programmers.co.kr/learn/courses/30/lessons/43164) | [행렬의 곱셈](https://programmers.co.kr/learn/courses/30/lessons/12949) | [사다리 조작](https://www.acmicpc.net/problem/15684) |
 | 34주차<br>(04.07 ~ 04.13) | [나무 재테크](https://www.acmicpc.net/problem/16235) | [가장 큰 정사각형 찾기](https://programmers.co.kr/learn/courses/30/lessons/12905) | [양궁대회](https://programmers.co.kr/learn/courses/30/lessons/92342) | [다단계 칫솔 판매](https://programmers.co.kr/learn/courses/30/lessons/77486) |
 | 35주차<br>(04.14 ~ 04.20) | [전화번호 목록](https://programmers.co.kr/learn/courses/30/lessons/42577) | [단속카메라](https://programmers.co.kr/learn/courses/30/lessons/42884) | [N개의 최소공배수](https://programmers.co.kr/learn/courses/30/lessons/12953) | [상어 초등학교](https://www.acmicpc.net/problem/21608) |
-| 36주차<br>(04.21 ~ 04.27) | :-: | :-: | :-: | [단체사진 찍기](https://programmers.co.kr/learn/courses/30/lessons/1835) |
+| 36주차<br>(04.21 ~ 04.27) | :-: | :-: | [[3차] n진수 게임](https://programmers.co.kr/learn/courses/30/lessons/17687) | [단체사진 찍기](https://programmers.co.kr/learn/courses/30/lessons/1835) |
