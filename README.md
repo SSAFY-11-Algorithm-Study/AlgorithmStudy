@@ -67,4 +67,4 @@
 | 34주차<br>(04.07 ~ 04.13) | [나무 재테크](https://www.acmicpc.net/problem/16235) | [가장 큰 정사각형 찾기](https://programmers.co.kr/learn/courses/30/lessons/12905) | [양궁대회](https://programmers.co.kr/learn/courses/30/lessons/92342) | [다단계 칫솔 판매](https://programmers.co.kr/learn/courses/30/lessons/77486) |
 | 35주차<br>(04.14 ~ 04.20) | [전화번호 목록](https://programmers.co.kr/learn/courses/30/lessons/42577) | [단속카메라](https://programmers.co.kr/learn/courses/30/lessons/42884) | [N개의 최소공배수](https://programmers.co.kr/learn/courses/30/lessons/12953) | [상어 초등학교](https://www.acmicpc.net/problem/21608) |
 | 36주차<br>(04.21 ~ 05.04) | [나이트의 이동](https://www.acmicpc.net/problem/7562) | [탈출](https://www.acmicpc.net/problem/3055) | [[3차] n진수 게임](https://programmers.co.kr/learn/courses/30/lessons/17687) | [단체사진 찍기](https://programmers.co.kr/learn/courses/30/lessons/1835) |
-| 37주차<br>(05.05 ~ 05.11) | :-: | :-: | :-: | [땅따먹기](https://programmers.co.kr/learn/courses/30/lessons/12913) |
+| 37주차<br>(05.05 ~ 05.11) | :-: | :-: | [최솟값 만들기](https://programmers.co.kr/learn/courses/30/lessons/12941) | [땅따먹기](https://programmers.co.kr/learn/courses/30/lessons/12913) |
